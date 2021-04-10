@@ -1,2 +1,2 @@
 # Multithreaded Dictionary Server-Client
- COMP90015-DistributedSystem Ass1
+ University of Melbourne - COMP90015 Distributed System Assignment 1
