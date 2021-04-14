@@ -1,3 +1,10 @@
+/*
+ * COMP90015 - Assignment 1
+ * Full name: Jiayu Han
+ * ID: 1164280
+ * 
+ */
+
 package server;
 
 import java.io.BufferedReader;
@@ -41,7 +48,7 @@ public class DictionaryServer {
 		} 
 		catch (IOException e)
 		{
-			System.out.println("Socket failed to create! (line 27)");
+			System.out.println("Socket failed to create!");
 		}
 		
 	}
@@ -89,9 +96,7 @@ public class DictionaryServer {
 		    else {
 		    	System.out.println("Error: not valid command - no :");
 		    	
-		    }
-		    
-		    
+		    }    
 		} 
 		catch (IOException e) 
 		{

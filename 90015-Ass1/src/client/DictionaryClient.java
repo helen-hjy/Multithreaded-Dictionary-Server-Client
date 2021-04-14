@@ -1,3 +1,9 @@
+/*
+ * COMP90015 - Assignment 1
+ * Full name: Jiayu Han
+ * ID: 1164280
+ * 
+ */
 package client;
 import java.awt.EventQueue;
 
@@ -26,14 +32,11 @@ import java.awt.event.ActionEvent;
 public class DictionaryClient extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField TextField;
-	private static JTextArea TextArea;
 	private static String inputtext; //input text in textfield
 	private static String operation; //operation command pass to server
 	private static String result; 	 //result string shown in TextArea
 	private static String ip;
 	private static int port;
-	private static Socket socket;
 	
 	/**
 	 * Launch the application.
@@ -51,7 +54,7 @@ public class DictionaryClient extends JFrame {
 					frame.setTitle("MyDict by Jiayu Han");
 					frame.setVisible(true);
 				} catch (Exception e) {
-					System.out.println("Cannot invoke Jframe for client GUI!");
+					System.out.println("Cannot invoke Jframe for client GUI.");
 				}
 			}
 		});
@@ -81,7 +84,7 @@ public class DictionaryClient extends JFrame {
 		}
 		catch (IOException e) 
 		{
-			System.out.println("Cannot run socket.");
+			System.out.println("Cannot run socket: wrong port number.");
 		}
 	}
 	/**
@@ -108,7 +111,7 @@ public class DictionaryClient extends JFrame {
 		gbc_lblNewLabel.gridy = 0;
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
-		TextArea = new JTextArea();
+		JTextArea TextArea = new JTextArea();
 		TextArea.setToolTipText("Output display");
 		TextArea.setFont(new Font("Book Antiqua", Font.PLAIN, 13));
 		GridBagConstraints gbc_TextArea = new GridBagConstraints();
@@ -119,7 +122,7 @@ public class DictionaryClient extends JFrame {
 		gbc_TextArea.gridy = 4;
 		contentPane.add(TextArea, gbc_TextArea);
 		
-		TextField = new JTextField();
+		JTextField TextField = new JTextField();
 		TextField.setToolTipText("Input a word or a word with its definition separated by comma");
 		TextField.setFont(new Font("Book Antiqua", Font.PLAIN, 13));
 		GridBagConstraints gbc_TextField = new GridBagConstraints();
